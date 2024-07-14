@@ -22,4 +22,4 @@ jobs:
 
     - name: Run Pytest
       run: |
-        pytest
+        python3 -m pytest image_cipher/tests/test_cipher.py
