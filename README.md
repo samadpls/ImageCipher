@@ -9,6 +9,7 @@ ImageCipher is a Python library for encoding and decoding messages in images usi
 ![Supported python versions](https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11-blue)
 [![PEP8](https://img.shields.io/badge/code%20style-pep8-black.svg)](https://www.python.org/dev/peps/pep-0008/)
 [![License](https://img.shields.io/badge/License-MIT%202.0-blue.svg)](LICENSE)
+[![Run Pytest](https://github.com/samadpls/ImageCipher/actions/workflows/pytest.yml/badge.svg?branch=main)](https://github.com/samadpls/ImageCipher/actions/workflows/pytest.yml)
 <img src='https://img.shields.io/github/stars/samadpls/ImageCipher?color=red&label=stars&logoColor=black&style=social'>
 ## Installation 🚀
 
