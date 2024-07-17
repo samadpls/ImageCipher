@@ -1,5 +1,6 @@
 import streamlit as st
 from image_cipher import ImageCipher
+from PIL import Image
 import tempfile
 import os
 
@@ -10,6 +11,13 @@ def save_uploaded_file_to_temp(uploaded_file):
     with open(temp_file_path, "wb") as f:
         f.write(uploaded_file.getbuffer())
     return temp_file_path
+
+
+def convert_to_png(image_path):
+    img = Image.open(image_path)
+    png_image_path = f"{os.path.splitext(image_path)[0]}.png"
+    img.save(png_image_path, "PNG")
+    return png_image_path
 
 
 def encrypt_image(image_path, message, encrypt):
@@ -42,7 +50,7 @@ def main():
     if app_mode == "Encrypt":
         st.header("Encrypt Image")
         uploaded_image = st.file_uploader(
-            "Choose an image...", type=["png"]
+            "Choose an image...", type=["png", "jpg", "jpeg"]
         )
         message = st.text_area("Enter your message")
         use_encryption = st.checkbox("Use Encryption")
@@ -50,6 +58,8 @@ def main():
         if st.button("Encrypt"):
             if uploaded_image and message:
                 temp_image_path = save_uploaded_file_to_temp(uploaded_image)
+                if uploaded_image.type in ["image/jpeg", "image/jpg"]:
+                    temp_image_path = convert_to_png(temp_image_path)
                 encoded_image_path, key = encrypt_image(
                     temp_image_path, message, use_encryption
                 )
@@ -72,24 +82,24 @@ def main():
     elif app_mode == "Decrypt":
         st.header("Decrypt Image")
         uploaded_image = st.file_uploader(
-            "Choose an image...", type=["png"]
+            "Choose an image...", type=["png", "jpg", "jpeg"]
         )
         key = st.text_input("Enter key (if any)")
 
         if st.button("Decrypt"):
             try:
                 if uploaded_image:
-                    temp_path = save_uploaded_file_to_temp(uploaded_image)
-                    decrypted_message = decrypt_image(temp_path, key)
+                    temp_image_path = save_uploaded_file_to_temp(uploaded_image)
+                    if uploaded_image.type in ["image/jpeg", "image/jpg"]:
+                        temp_image_path = convert_to_png(temp_image_path)
+                    decrypted_message = decrypt_image(temp_image_path, key)
                     st.text_area(
                         "Decrypted Message",
                         value=decrypted_message,
                         height=200
                     )
-
                 else:
                     st.error("Please upload an image to decrypt.")
-
             except Exception as e:
                 st.error(e)
 
