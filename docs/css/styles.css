@@ -1,0 +1,97 @@
+/* Main container */
+body {
+  background-color: #181d27;
+  color: #ffbf00;
+}
+
+/* Sidebar */
+.css-1d391kg {
+  background-color: #4f535a;
+}
+
+.css-1lcbmhc, .css-1d2azem {
+  color: #ffbf00;
+}
+
+.css-1v8qudd {
+  background-color: #2c374d;
+  color: #ffbf00;
+}
+
+/* Header */
+.css-1siy2j7 {
+  color: #ffbf00;
+}
+
+/* Radio buttons and text input */
+.css-1ex6qaa {
+  background-color: #2c374d;
+  color: #ffbf00;
+}
+
+.css-1ex6qaa input[type="radio"] {
+  background-color: #2c374d;
+  color: #ffbf00;
+}
+
+.css-1ex6qaa input[type="text"] {
+  background-color: #2c374d;
+  color: #ffbf00;
+}
+
+.css-1ex6qaa textarea {
+  background-color: #2c374d;
+  color: #ffbf00;
+}
+
+/* Buttons */
+.css-1df45cr, .css-1f1iwnp, .css-1ktajzc {
+  background-color: #152544;
+  color: #ffbf00;
+}
+
+.css-1df45cr:hover, .css-1f1iwnp:hover, .css-1ktajzc:hover {
+  background-color: #152544;
+  color: #ffffff;
+}
+
+/* Download button */
+.css-10trblm {
+  background-color: #152544;
+  color: #ffbf00;
+}
+
+.css-10trblm:hover {
+  background-color: #152544;
+  color: #ffffff;
+}
+
+/* Image */
+.css-11v1u3b img {
+  border: 2px solid #ffbf00;
+}
+
+/* Text */
+.css-qrbaxs p {
+  color: #ffbf00;
+}
+
+/* Error messages */
+.css-19hj99j {
+  background-color: #2c374d;
+  color: #ffbf00;
+}
+
+/* Markdown */
+.css-1uix8eu h1, .css-1uix8eu h2, .css-1uix8eu h3, .css-1uix8eu h4, .css-1uix8eu h5, .css-1uix8eu h6, .css-1uix8eu p {
+  color: #ffbf00;
+}
+
+/* Links */
+a {
+  color: #ffbf00;
+}
+
+a:hover {
+  color: #ffffff;
+}

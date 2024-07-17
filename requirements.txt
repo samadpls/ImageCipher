@@ -2,3 +2,4 @@ Pillow
 cryptography
 pytest
 flake8
+streamlit
