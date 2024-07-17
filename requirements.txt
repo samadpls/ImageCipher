@@ -2,3 +2,4 @@ Pillow==10.4.0
 cryptography==42.0.8
 pytest==8.2.2
 flake8==7.1.0
+streamlit
