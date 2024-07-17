@@ -42,7 +42,7 @@ def main():
     if app_mode == "Encrypt":
         st.header("Encrypt Image")
         uploaded_image = st.file_uploader(
-            "Choose an image...", type=["png", "jpg", "jpeg"]
+            "Choose an image...", type=["png"]
         )
         message = st.text_area("Enter your message")
         use_encryption = st.checkbox("Use Encryption")
@@ -72,7 +72,7 @@ def main():
     elif app_mode == "Decrypt":
         st.header("Decrypt Image")
         uploaded_image = st.file_uploader(
-            "Choose an image...", type=["png", "jpg", "jpeg"]
+            "Choose an image...", type=["png"]
         )
         key = st.text_input("Enter key (if any)")
 
