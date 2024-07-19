@@ -107,7 +107,7 @@ def main():
         st.header("About Us")
         st.markdown(
             "This project is developed by <ul> <li>(Abdul Samad)\
-                    (https://github.com/samadpls/) </li>\
+                    [https://github.com/samadpls/] </li>\
                      <li> [Maira Usman](https://github.com/Myrausman/)</li> \
                     </ul>",
             unsafe_allow_html=True,
