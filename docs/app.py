@@ -106,7 +106,7 @@ def main():
     elif app_mode == "About Us":
         st.header("About Us")
         st.markdown(
-            "This project is developed by <ul> <li>[Abdul Samad]\
+            "This project is developed by <ul> <li>(Abdul Samad)\
                     (https://github.com/samadpls/) </li>\
                      <li> [Maira Usman](https://github.com/Myrausman/)</li> \
                     </ul>",
